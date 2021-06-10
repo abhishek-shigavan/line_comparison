@@ -1,6 +1,5 @@
 /**
- * LineComparison --- program to check length of two lines
- *                    are equal or not
+ * LineComparison --- program to compare length of two lines.
  *
  * @author    Abhishek Shigavan
  */
@@ -74,13 +73,17 @@ public class LineComparison {
 		String lengthOfLine2=Integer.toString(lengthOfLine(xa,xb,ya,yb));
 		System.out.println("Length of line 2 : "+ lengthOfLine2);
 
-		if (lengthOfLine1.equals(lengthOfLine2)){
-			System.out.println("Line 1 and Line 2 are of Equal Length");
+		int compareResult=lengthOfLine1.compareTo(lengthOfLine2);
+
+		if (compareResult > 0){
+			System.out.println("Length of Line 1 is greater than Line 2");
+		}
+		else if (compareResult < 0) {
+			System.out.println("Length of Line 1 is less than Line 2");
 		}
 		else{
-			System.out.println("Line 1 and Line 2 are not of equal length" );
+			System.out.println("Line 1 and Line 2 are of equal length" );
 		}
 	}
 
 }
-
