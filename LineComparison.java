@@ -1,54 +1,33 @@
+/**
+ * LineComparison --- program to calculate length of line.
+ *
+ *
+ * @author    Abhishek Shigavan
+ */
+import java.util.*;
+
 public class LineComparison {
-
-	static int lengthOfLine(int x1,int x2,int y1,int y2) {
-
-		int length=(int)(Math.sqrt( ((x2-x1)*(x2-x1)) + ((y2-y1)*(y2-y1)) ));
-		return length;
-	}
 
 	public static void main(String[] args) {
 
+		Scanner sc = new Scanner(System.in);
+
 		System.out.println("Welcome to Line Comparison Program...!!");
+		System.out.println("Enter Coordinates for Line");
 
-		//point A coordinates
-		int xa;
-		int ya;
-		//point B coordinates
-		int xb;
-		int yb;
+		System.out.println("Enter x coordinates for point A");
+                int xa= sc.nextInt();
+                System.out.println("Enter y coordinates for point A");
+                int ya= sc.nextInt();
+                System.out.println("Enter x coordinates for point B");
+                int xb= sc.nextInt();
+                System.out.println("Enter y coordinates for point B");
+                int yb= sc.nextInt();
 
-		//line1
-		xa=2;
-		ya=3;
-		xb=9;
-		yb=6;
+		int lengthOfLine=(int)(Math.sqrt( ((xb-xa)*(xb-xa)) + ((yb-ya)*(yb-ya)) ));
 
-		String lengthOfLine1=Integer.toString(lengthOfLine(xa,xb,ya,yb));
+		System.out.println("Length of line : "+ lengthOfLine);
 
-		System.out.println("Length of line 1 : "+ lengthOfLine1);
-
-		//line 2
-		xa=1;
-		ya=3;
-		xb=2;
-		yb=9;
-
-		String lengthOfLine2=Integer.toString(lengthOfLine(xa,xb,ya,yb));
-
-		System.out.println("Length of line 2 : "+ lengthOfLine2);
-
-		int compareResult=lengthOfLine1.compareTo(lengthOfLine2);
-
-		if (lengthOfLine1.equals(lengthOfLine2))
-		{
-			System.out.println("Line 1 and Line 2 are of equal length");
-		}
-		else if (compareResult > 0)
-		{
-			System.out.println("Length of Line 1 is greater than Line 2");
-		}
-		else
-			System.out.println("Length of Line 1 is less than Line 2" );
 	}
 
 }
