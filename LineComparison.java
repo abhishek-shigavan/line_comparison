@@ -1,18 +1,33 @@
+/**
+ * LineComparison --- program to calculate length of line.
+ *
+ *
+ * @author    Abhishek Shigavan
+ */
+import java.util.*;
+
 public class LineComparison {
 
 	public static void main(String[] args) {
 
-		//point A coordinates
-		int x1 = 2;
-		int y1 = 3;
-		//point B coordinates
-		int x2 = 9;
-		int y2 = 6;
+		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Welcome to Line Comparison Program...!!");
+		System.out.println("Enter Coordinates for Line");
 
-		int lengthOfLine=(int)(Math.sqrt( ((x2-x1)*(x2-x1)) + ((y2-y1)*(y2-y1)) ));
+		System.out.println("Enter x coordinates for point A");
+                int xa= sc.nextInt();
+                System.out.println("Enter y coordinates for point A");
+                int ya= sc.nextInt();
+                System.out.println("Enter x coordinates for point B");
+                int xb= sc.nextInt();
+                System.out.println("Enter y coordinates for point B");
+                int yb= sc.nextInt();
 
-		System.out.println("Length of the line : " + lengthOfLine);
+		int lengthOfLine=(int)(Math.sqrt( ((xb-xa)*(xb-xa)) + ((yb-ya)*(yb-ya)) ));
+
+		System.out.println("Length of line : "+ lengthOfLine);
 	}
+
 }
+
